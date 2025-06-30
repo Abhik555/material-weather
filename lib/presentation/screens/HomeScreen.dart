@@ -22,9 +22,8 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     // TODO: implement initState
-    context.read<WeatherBloc>().add(RequestWeatherPermission());
-    context.read<WeatherBloc>().add(UpdateWeather());
     super.initState();
+    context.read<WeatherBloc>().add(UpdateWeather());
   }
 
   @override
