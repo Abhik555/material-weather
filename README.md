@@ -16,9 +16,10 @@ This application provides real-time weather information with a clean, intuitive,
 ## 🖼️ Screenshots
 
 <!-- ![screenshot 1](./screenshots/1.jpg) ![screenshot 1](./screenshots/2.jpg) ![screenshot 1](./screenshots/3.jpg) -->
-<img src="./screenshots/1.jpg" height=500>
-<img src="./screenshots/2.jpg" height=500>
-<img src="./screenshots/3.jpg" height=500>
+
+<img src="./screenshots/1.jpg" height=500 width="230">
+<img src="./screenshots/2.jpg" height=500 width="230">
+<img src="./screenshots/3.jpg" height=500 width="230">
 
 ## 🛠️ Tech Stack
 
