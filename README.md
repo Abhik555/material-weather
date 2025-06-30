@@ -1,4 +1,26 @@
-# Material Weather 🌤️
+<p align="center">
+<img src="./assets/icon/weather.png" width = 150 height = 150>
+</p>
+<h1 align="center">
+Material Weather 
+</h1>
+
+<br />
+
+<div align="center">
+<img alt="API 21+" src="https://img.shields.io/badge/Api%2021+-50f270?logo=android&logoColor=black&style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white">
+<img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt = "flutter">
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/abhik555/material-weather?style=for-the-badge">
+<img alt="GitHub forks" src="https://img.shields.io/github/forks/abhik555/material-weather?style=for-the-badge">
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/abhik555/material-weather?style=for-the-badge">
+<img alt="GitHub License" src="https://img.shields.io/github/license/abhik555/material-weather?style=for-the-badge">
+
+<br/>
+
+<img alt="GitHub Release" src="https://img.shields.io/github/v/release/abhik555/material-weather?style=for-the-badge">
+</div>
+<br />
 
 **A modern, material design-inspired weather application built with Flutter.**
 
