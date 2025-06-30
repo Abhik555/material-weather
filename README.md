@@ -15,7 +15,7 @@ This application provides real-time weather information with a clean, intuitive,
 
 ## 🖼️ Screenshots
 
-*(Placeholder for screenshots of the application. Consider adding images of the main screen, forecast details, and city search functionality.)*
+![screenshot 1](./screenshots/1.jpg) ![screenshot 1](./screenshots/2.jpg) ![screenshot 1](./screenshots/3.jpg)
 
 ## 🛠️ Tech Stack
 
