@@ -18,5 +18,9 @@ final class SelectWeather extends WeatherEvent {
   final double latitude;
   final double longitude;
 
-  SelectWeather({required this.name, required this.latitude, required this.longitude});
+  SelectWeather({
+    required this.name,
+    required this.latitude,
+    required this.longitude,
+  });
 }

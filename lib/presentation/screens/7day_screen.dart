@@ -24,7 +24,12 @@ class _SevenDaysForecastScreenState extends State<SevenDaysForecastScreen> {
         backgroundColor: Color.fromARGB(255, 27, 27, 27),
         appBar: AppBar(
           backgroundColor: Colors.transparent,
-          title: Text("7 Day Forecast" , style: Theme.of(context).textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.bold),),
+          title: Text(
+            "7 Day Forecast",
+            style: Theme.of(
+              context,
+            ).textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.bold),
+          ),
           centerTitle: true,
         ),
         body: ListView.builder(

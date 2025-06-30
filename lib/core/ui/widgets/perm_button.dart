@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class SearchButton extends StatefulWidget {
-  const SearchButton({super.key , required this.onClick});
+class PermissionButton extends StatefulWidget {
+  const PermissionButton({super.key, required this.onClick});
 
   final GestureTapCallback onClick;
 
   @override
-  State<SearchButton> createState() => _SearchButtonState();
+  State<PermissionButton> createState() => _PermissionButtonState();
 }
 
-class _SearchButtonState extends State<SearchButton> {
+class _PermissionButtonState extends State<PermissionButton> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -26,7 +26,7 @@ class _SearchButtonState extends State<SearchButton> {
         ),
         child: Center(
           child: Text(
-            "Search",
+            "Grant Compression",
             style: GoogleFonts.delius().copyWith(
               color: Colors.black,
               fontWeight: FontWeight.bold,

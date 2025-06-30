@@ -39,7 +39,7 @@ class _LocationtileState extends State<Locationtile> {
         margin: EdgeInsetsGeometry.only(top: 8.0, bottom: 8.0),
         child: Wrap(
           children: [
-            CountryFlag.fromCountryCode(widget.countryCode , shape: Circle(),),
+            CountryFlag.fromCountryCode(widget.countryCode, shape: Circle()),
             const SizedBox(width: 15),
             Text(
               "${widget.name}\n${widget.city}, ${widget.country}",

@@ -9,6 +9,8 @@ import 'package:material_weather/core/models/weather.dart';
 import 'package:material_weather/core/utils/locutil.dart';
 
 import 'package:meta/meta.dart';
+import 'package:permission_handler/permission_handler.dart'
+    hide PermissionStatus;
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../core/utils/getit.dart';
@@ -31,12 +33,12 @@ class WeatherBloc extends Bloc<WeatherEvent, WeatherState> {
     });
 
     on<SelectWeather>((event, emit) async {
-      await selectLogic(event, emit , info);
+      await selectLogic(event, emit, info);
     });
 
     on<RequestWeatherPermission>((event, emit) async {
       emit(WeatherLoading());
-      bool isAllowed = await checkLocation();
+      bool isAllowed = await Permission.location.request().isGranted;
       return emit(WeatherFirstLaunch(isPerms: isAllowed));
     });
   }
@@ -45,19 +47,24 @@ class WeatherBloc extends Bloc<WeatherEvent, WeatherState> {
 Future<void> selectLogic(
   SelectWeather event,
   Emitter<WeatherState> emit,
-    LocationInfo info,
+  LocationInfo info,
 ) async {
   emit(WeatherLoading());
   try {
-
     info.latitude = event.latitude;
     info.longitude = event.longitude;
     info.name = event.name;
     info.isCurrent = false;
 
     serviceLocator.get<SharedPreferences>().setString("location", event.name);
-    serviceLocator.get<SharedPreferences>().setDouble("latitude", event.latitude);
-    serviceLocator.get<SharedPreferences>().setDouble("longitude", event.longitude);
+    serviceLocator.get<SharedPreferences>().setDouble(
+      "latitude",
+      event.latitude,
+    );
+    serviceLocator.get<SharedPreferences>().setDouble(
+      "longitude",
+      event.longitude,
+    );
 
     var data = await getData(event.name, event.latitude, event.longitude);
     return emit(WeatherSuccess(data: data));

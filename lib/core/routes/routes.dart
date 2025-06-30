@@ -9,12 +9,25 @@ import 'package:material_weather/core/utils/getit.dart';
 import 'package:material_weather/presentation/screens/7day_screen.dart';
 import 'package:material_weather/presentation/screens/HomeScreen.dart';
 import 'package:material_weather/presentation/screens/location_change_screen.dart';
+import 'package:material_weather/presentation/screens/onboarding.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 final bloc = WeatherBloc(serviceLocator.get<LocationInfo>());
 
 final GoRouter routerConfig = GoRouter(
-  initialLocation: "/",
+  initialLocation:
+      serviceLocator.get<SharedPreferences>().getBool("firstLaunch") == true
+      ? "/first"
+      : "/",
   routes: <RouteBase>[
+    GoRoute(
+      path: '/first',
+      name: "onboarding",
+      builder: (BuildContext context, GoRouterState state) {
+        return OnBoardingScreen();
+      },
+      pageBuilder: GoTransitions.cupertino.call,
+    ),
     GoRoute(
       path: '/',
       name: "home",

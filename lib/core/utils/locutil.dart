@@ -16,8 +16,7 @@ Future<bool> checkLocation() async {
 
   _permissionGranted = await serviceLocator<Location>().hasPermission();
   if (_permissionGranted == PermissionStatus.denied) {
-    _permissionGranted = await serviceLocator<Location>()
-        .requestPermission();
+    _permissionGranted = await serviceLocator<Location>().requestPermission();
     if (_permissionGranted != PermissionStatus.granted) {
       return false;
     }

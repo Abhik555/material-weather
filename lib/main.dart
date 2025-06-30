@@ -6,6 +6,7 @@ import 'package:material_weather/core/utils/getit.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initDependencies();
+  // Permission.location.request();
   runApp(const MaterialWeather());
 }
 

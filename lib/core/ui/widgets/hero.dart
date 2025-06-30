@@ -18,7 +18,7 @@ class _HeroWidgetState extends State<HeroWidget> {
   Widget build(BuildContext context) {
     return BlocBuilder<WeatherBloc, WeatherState>(
       builder: (context, state) {
-        if(state is WeatherFirstLaunch){
+        if (state is WeatherFirstLaunch) {
           return Container();
         }
 

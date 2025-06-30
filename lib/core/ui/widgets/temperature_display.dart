@@ -52,9 +52,7 @@ class _TemperatureDisplayState extends State<TemperatureDisplay> {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Center(child: CircularProgressIndicator()),
-            ],
+            children: [Center(child: CircularProgressIndicator())],
           );
         }
       },

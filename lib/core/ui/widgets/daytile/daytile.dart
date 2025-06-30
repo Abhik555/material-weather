@@ -27,9 +27,8 @@ class DayTile extends StatefulWidget {
 class _DayTileState extends State<DayTile> {
   @override
   Widget build(BuildContext context) {
-    
     final day = DateFormat('EEEE').format(DateTime.parse(widget.daydate));
-    
+
     return Container(
       decoration: BoxDecoration(
         border: Border.all(color: Color.fromARGB(255, 58, 58, 58), width: 2.5),
@@ -53,7 +52,7 @@ class _DayTileState extends State<DayTile> {
                   fontSize: 21,
                 ),
               ),
-              const SizedBox(height: 10,),
+              const SizedBox(height: 10),
               Text(
                 "Max: ${widget.max}${widget.unit} \nMin: ${widget.min}${widget.unit}",
                 style: GoogleFonts.delius().copyWith(

@@ -23,7 +23,7 @@ class _InfoItemState extends State<InfoItem> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsetsGeometry.symmetric(vertical: 4.0 , horizontal: 8.0),
+      margin: EdgeInsetsGeometry.symmetric(vertical: 4.0, horizontal: 8.0),
       padding: EdgeInsetsGeometry.symmetric(horizontal: 4.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

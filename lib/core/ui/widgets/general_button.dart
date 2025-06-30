@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ForecastButton extends StatefulWidget {
-  const ForecastButton({super.key, required this.onClick});
+class GeneralButton extends StatefulWidget {
+  const GeneralButton({super.key, required this.title, required this.onClick});
 
+  final String title;
   final GestureTapCallback onClick;
 
   @override
-  State<ForecastButton> createState() => _ForecastButtonState();
+  State<GeneralButton> createState() => _GeneralButtonState();
 }
 
-class _ForecastButtonState extends State<ForecastButton> {
+class _GeneralButtonState extends State<GeneralButton> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -26,7 +27,7 @@ class _ForecastButtonState extends State<ForecastButton> {
         ),
         child: Center(
           child: Text(
-            "7 Day Forecast",
+            widget.title,
             style: GoogleFonts.delius().copyWith(
               color: Colors.black,
               fontWeight: FontWeight.bold,
